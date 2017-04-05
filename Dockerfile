@@ -15,4 +15,6 @@ RUN ln -sf /proc/1/fd/1 /var/log/cron.log
 
 COPY ./docker-entrypoint.sh /usr/local/bin/
 
+WORKDIR /var/www/html/
+
 CMD ["/usr/local/bin/docker-entrypoint.sh"]
