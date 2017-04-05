@@ -4,8 +4,8 @@ services:
     # image: quentinv/phpservermonitor:latest
     build: .
     ports:
-    - "5000:80"
-    - "5443:443"
+    - "80"
+    - "443"
     volumes:
       - ./config.php:/var/www/html/config.php
       - ./etc/cron.d/hello-cron://etc/cron.d/hello-cron
@@ -13,4 +13,6 @@ services:
     image: mariadb:10
     environment:
       MYSQL_DATABASE: monitor
-      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_USER: monitor
+      MYSQL_PASSWORD: my-secret-p@ss0rd
+      MYSQL_RANDOM_ROOT_PASSWORD: 1

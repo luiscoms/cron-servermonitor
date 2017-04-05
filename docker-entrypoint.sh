@@ -1,3 +1,6 @@
 #!/bin/bash
 
-cron && /usr/sbin/apache2ctl -D FOREGROUND
+echo "Starting cron"
+cron
+echo "Starting apache"
+/usr/sbin/apache2ctl -D FOREGROUND
