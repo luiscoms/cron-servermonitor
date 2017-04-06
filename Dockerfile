@@ -1,6 +1,6 @@
 FROM quentinv/phpservermonitor:latest
 
-RUN apt-get update && apt-get -y install cron
+RUN apt-get update && apt-get -y install cron vim
 
 # Add crontab file in the cron directory
 ADD etc/cron.d/hello-cron /etc/cron.d/hello-cron
