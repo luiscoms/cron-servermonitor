@@ -9,7 +9,7 @@ services:
     volumes:
       - ./config.php:/var/www/html/config/config.php
       - ./etc/cron.d/hello-cron:/etc/crontab
-    volumes:
+    environment:
       SLEEP_SECONDS: 66
 
   db:
